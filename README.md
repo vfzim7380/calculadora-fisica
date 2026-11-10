@@ -1,75 +1,54 @@
-# Physics Calculator
+# Calculadora de Física
 
-Uma calculadora de Física desenvolvida em Java, com o objetivo de facilitar cálculos utilizando 15 fórmulas de diferentes áreas da Física.
-
-## Sobre o projeto
-
-O Physics Calculator é um projeto educacional desenvolvido para praticar a linguagem Java, aprimorar a lógica de programação e aplicar conceitos de Programação Orientada a Objetos (POO).
-
-A aplicação permite selecionar uma área da Física, escolher uma fórmula, informar os valores necessários e obter o resultado automaticamente.
+Projeto educacional em Java com 15 fórmulas de cinco áreas da Física. A aplicação funciona pelo terminal: o usuário escolhe uma área, seleciona uma fórmula, informa os valores e recebe o resultado com unidade.
 
 ## Fórmulas disponíveis
 
-### Cinemática
-- Velocidade média
-- Aceleração média
-- Movimento uniforme (MU)
-- Movimento uniformemente variado (MUV)
-- Equação de Torricelli
+- **Cinemática:** velocidade média, aceleração média, movimento uniforme, movimento uniformemente variado e equação de Torricelli.
+- **Dinâmica:** Segunda Lei de Newton, força peso e força de atrito.
+- **Trabalho e Energia:** trabalho de uma força constante, energia cinética e energia potencial gravitacional.
+- **Termologia:** calor sensível e calor latente.
+- **Eletricidade:** Primeira Lei de Ohm e potência elétrica.
 
-### Dinâmica
-- Segunda Lei de Newton
-- Força peso
-- Força de atrito
+## Requisitos
 
-### Trabalho e Energia
-- Trabalho de uma força constante
-- Energia cinética
-- Energia potencial gravitacional
+- JDK 21 (ou outra versão compatível com os recursos básicos utilizados).
+- Terminal ou IDE como Eclipse e VS Code.
 
-### Termologia
-- Calor sensível
-- Calor latente
+## Como executar
 
-### Eletricidade
-- Primeira Lei de Ohm
-- Potência elétrica
+Na pasta raiz do projeto:
 
-## Tecnologias utilizadas
+```bash
+javac -d out src/main.java src/util/*.java src/formulas/*.java
+java -cp out main
+```
 
-- Java
-- Programação Orientada a Objetos (POO)
+No Windows PowerShell, os mesmos comandos funcionam. No VS Code, também é possível abrir a pasta do projeto e executar `src/main.java` com a extensão Java.
 
-## Estrutura do projeto
+## Organização
 
 ```text
-PhysicsCalculator/
+calculadora-fisica/
 ├── src/
-│   ├── Main.java
-│   ├── Menu.java
-│   ├── Formulas/
-│   │   ├── Cinematica.java
-│   │   ├── Dinamica.java
-│   │   ├── Energia.java
-│   │   ├── Termologia.java
-│   │   └── Eletricidade.java
-│   └── Util/
-│       └── EntradaDados.java
+│   ├── main.java
+│   ├── formulas/
+│   │   ├── cinematica.java
+│   │   ├── dinamica.java
+│   │   ├── energia.java
+│   │   ├── termologia.java
+│   │   └── eletricidade.java
+│   └── util/
+│       ├── Menu.java
+│       └── input.java
 └── README.md
 ```
 
-## Objetivos de aprendizado
+## Observações
 
-- Aprender e praticar Java.
-- Aplicar conceitos de Programação Orientada a Objetos.
-- Trabalhar com classes, objetos, atributos e métodos.
-- Desenvolver uma aplicação organizada e funcional.
-- Aplicar conhecimentos matemáticos em programação.
+- Informe valores usando as unidades solicitadas no terminal.
+- Para gravidade terrestre, pode ser utilizado `9.8 m/s²`.
+- Na equação de Torricelli, o programa apresenta o módulo da velocidade final.
+- O projeto é didático; confira as unidades e os sinais físicos dos valores utilizados.
 
-## Status do projeto
-
-Em desenvolvimento.
-
----
-
-Desenvolvido como projeto de aprendizado em programação Java.
+Desenvolvido para praticar Java, organização em classes e métodos e aplicação de fórmulas de Física.
